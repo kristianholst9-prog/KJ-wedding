@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jakob &amp; Klara — 29. mai 2027</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero__inner">
+      <p class="hero__pre">Vi gleder oss til å feire</p>
+      <h1 class="hero__names">Jakob <span class="amp">&amp;</span> Klara</h1>
+      <div class="hero__divider">
+        <span class="hero__line"></span>
+        <svg class="hero__ring" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="13" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="20" cy="20" r="8"  stroke="currentColor" stroke-width="1"/>
+        </svg>
+        <span class="hero__line"></span>
+      </div>
+      <p class="hero__date">29. mai 2027</p>
+      <p class="hero__sub">Fagerborg kirke · Oslo</p>
+    </div>
+    <div class="hero__scroll-hint">↓</div>
+  </header>
+
+  <!-- Countdown -->
+  <section class="countdown-section">
+    <div class="container">
+      <div class="countdown" id="countdown">
+        <div class="countdown__block">
+          <span class="countdown__num" id="cd-days">—</span>
+          <span class="countdown__label">Dager</span>
+        </div>
+        <div class="countdown__sep">:</div>
+        <div class="countdown__block">
+          <span class="countdown__num" id="cd-hours">—</span>
+          <span class="countdown__label">Timer</span>
+        </div>
+        <div class="countdown__sep">:</div>
+        <div class="countdown__block">
+          <span class="countdown__num" id="cd-mins">—</span>
+          <span class="countdown__label">Minutter</span>
+        </div>
+        <div class="countdown__sep">:</div>
+        <div class="countdown__block">
+          <span class="countdown__num" id="cd-secs">—</span>
+          <span class="countdown__label">Sekunder</span>
+        </div>
+      </div>
+      <p class="countdown__caption">til vi sier ja</p>
+    </div>
+  </section>
+
+  <!-- Program -->
+  <section class="program section">
+    <div class="container container--narrow">
+      <h2 class="section__title">Programmet</h2>
+      <div class="timeline">
+
+        <div class="timeline__item">
+          <div class="timeline__icon">⛪</div>
+          <div class="timeline__body">
+            <h3 class="timeline__heading">Vielse</h3>
+            <p class="timeline__time">Kl. 13:00</p>
+            <p class="timeline__place">Fagerborg kirke</p>
+            <p class="timeline__address">Gimleveien 14, 0264 Oslo</p>
+          </div>
+        </div>
+
+        <div class="timeline__item">
+          <div class="timeline__icon">🥂</div>
+          <div class="timeline__body">
+            <h3 class="timeline__heading">Middag &amp; fest</h3>
+            <p class="timeline__time">Etter vielsen</p>
+            <p class="timeline__place">Oslo Folkehøyskole Rønningen</p>
+            <p class="timeline__address">Rønningveien 96, 0890 Oslo</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Locations -->
+  <section class="locations section section--warm">
+    <div class="container">
+      <h2 class="section__title">Steder</h2>
+      <div class="locations__grid">
+
+        <div class="location-card">
+          <h3 class="location-card__title">Fagerborg kirke</h3>
+          <p class="location-card__sub">Gimleveien 14, 0264 Oslo</p>
+          <div class="map-wrap">
+            <iframe
+              title="Fagerborg kirke"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=10.7109%2C59.9240%2C10.7260%2C59.9320&layer=mapnik&marker=59.9281%2C10.7185"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <a class="location-card__link"
+             href="https://www.google.com/maps/search/?api=1&query=Fagerborg+kirke+Oslo"
+             target="_blank" rel="noopener">
+            Åpne i Google Maps →
+          </a>
+        </div>
+
+        <div class="location-card">
+          <h3 class="location-card__title">Oslo Folkehøyskole Rønningen</h3>
+          <p class="location-card__sub">Rønningveien 96, 0890 Oslo</p>
+          <div class="map-wrap">
+            <iframe
+              title="Oslo Folkehøyskole Rønningen"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=10.6880%2C59.9500%2C10.7080%2C59.9580&layer=mapnik&marker=59.9540%2C10.6979"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <a class="location-card__link"
+             href="https://www.google.com/maps/search/?api=1&query=Oslo+Folkehøyskole+Rønningen"
+             target="_blank" rel="noopener">
+            Åpne i Google Maps →
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer__names">Jakob &amp; Klara</p>
+    <p class="footer__date">29. mai 2027</p>
+    <p class="footer__heart">♡</p>
+  </footer>
+
+  <script>
+    (function () {
+      const target = new Date('2027-05-29T13:00:00');
+      function pad(n) { return String(n).padStart(2, '0'); }
+      function tick() {
+        const now = new Date();
+        const diff = target - now;
+        if (diff <= 0) {
+          document.getElementById('countdown').innerHTML = '<p class="countdown__done">Dagen er her! 🎉</p>';
+          return;
+        }
+        const days  = Math.floor(diff / 86400000);
+        const hours = Math.floor((diff % 86400000) / 3600000);
+        const mins  = Math.floor((diff % 3600000)  / 60000);
+        const secs  = Math.floor((diff % 60000)    / 1000);
+        document.getElementById('cd-days').textContent  = days;
+        document.getElementById('cd-hours').textContent = pad(hours);
+        document.getElementById('cd-mins').textContent  = pad(mins);
+        document.getElementById('cd-secs').textContent  = pad(secs);
+      }
+      tick();
+      setInterval(tick, 1000);
+    })();
+  </script>
+
+</body>
+</html>

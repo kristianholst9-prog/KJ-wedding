@@ -1,0 +1,375 @@
+/* ─── Reset & Base ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream:    #FAF7F2;
+  --warm-off: #F3EDE3;
+  --blush:    #D4A9A0;
+  --rose:     #B07870;
+  --gold:     #C2965A;
+  --gold-lt:  #D4AD7A;
+  --sage:     #8A9E8A;
+  --text:     #3A3028;
+  --text-lt:  #6E5E52;
+  --border:   #DDD3C6;
+
+  --ff-serif: 'Cormorant Garamond', Georgia, serif;
+  --ff-sans:  'Lato', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--text);
+  font-family: var(--ff-sans);
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Layout helpers ────────────────────────────────────────── */
+.container         { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.container--narrow { max-width: 680px;  margin: 0 auto; padding: 0 2rem; }
+
+.section       { padding: 6rem 0; }
+.section--warm { background: var(--warm-off); }
+
+.section__title {
+  font-family: var(--ff-serif);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  color: var(--text);
+  position: relative;
+}
+.section__title::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 1px;
+  background: var(--gold);
+  margin: 0.9rem auto 0;
+}
+
+/* ─── Hero ──────────────────────────────────────────────────── */
+.hero {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem 6rem;
+  position: relative;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 110%, #e8d8cf55 0%, transparent 70%),
+    radial-gradient(ellipse 60% 40% at 20% 0%,   #c9a96e18 0%, transparent 60%),
+    var(--cream);
+}
+
+.hero::before,
+.hero::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.hero::before {
+  width: 520px; height: 520px;
+  top: -120px; left: -140px;
+  background: radial-gradient(circle, #d4a9a014 0%, transparent 70%);
+}
+.hero::after {
+  width: 400px; height: 400px;
+  bottom: -80px; right: -100px;
+  background: radial-gradient(circle, #c9a96e10 0%, transparent 70%);
+}
+
+.hero__inner { position: relative; z-index: 1; }
+
+.hero__pre {
+  font-family: var(--ff-sans);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-lt);
+  margin-bottom: 1.6rem;
+}
+
+.hero__names {
+  font-family: var(--ff-serif);
+  font-size: clamp(3.2rem, 9vw, 7rem);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  color: var(--text);
+}
+
+.amp {
+  font-style: normal;
+  color: var(--gold);
+  display: inline-block;
+  margin: 0 0.2em;
+}
+
+.hero__divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  color: var(--blush);
+}
+.hero__line { flex: 1; max-width: 80px; height: 1px; background: var(--blush); }
+.hero__ring { width: 32px; height: 32px; }
+
+.hero__date {
+  font-family: var(--ff-serif);
+  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.5rem;
+}
+
+.hero__sub {
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-lt);
+}
+
+.hero__scroll-hint {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--blush);
+  font-size: 1.4rem;
+  animation: bob 2.2s ease-in-out infinite;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.5; }
+  50%       { transform: translateX(-50%) translateY(6px); opacity: 1; }
+}
+
+/* ─── Countdown ─────────────────────────────────────────────── */
+.countdown-section {
+  background: var(--text);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.countdown {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.countdown__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+}
+
+.countdown__num {
+  font-family: var(--ff-serif);
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1;
+}
+
+.countdown__label {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--blush);
+  margin-top: 0.4rem;
+}
+
+.countdown__sep {
+  font-family: var(--ff-serif);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--gold);
+  line-height: 1;
+  padding-top: 0.05em;
+  align-self: flex-start;
+}
+
+.countdown__caption {
+  font-family: var(--ff-serif);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--blush);
+  margin-top: 1.4rem;
+}
+
+.countdown__done {
+  font-family: var(--ff-serif);
+  font-size: 2rem;
+  color: var(--cream);
+}
+
+/* ─── Timeline / Program ────────────────────────────────────── */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timeline__item {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 1.5rem;
+  padding: 2.2rem 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+.timeline__item:last-child { border-bottom: none; }
+
+.timeline__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--warm-off);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.timeline__heading {
+  font-family: var(--ff-serif);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+}
+
+.timeline__time {
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.2rem;
+}
+
+.timeline__place {
+  font-family: var(--ff-serif);
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--text-lt);
+}
+
+.timeline__address {
+  font-size: 0.82rem;
+  color: var(--text-lt);
+  margin-top: 0.1rem;
+}
+
+/* ─── Locations / Maps ──────────────────────────────────────── */
+.locations__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.location-card {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.location-card__title {
+  font-family: var(--ff-serif);
+  font-size: 1.45rem;
+  font-weight: 400;
+  padding: 1.4rem 1.6rem 0.2rem;
+  color: var(--text);
+}
+
+.location-card__sub {
+  font-size: 0.8rem;
+  color: var(--text-lt);
+  letter-spacing: 0.04em;
+  padding: 0 1.6rem 1.2rem;
+}
+
+.map-wrap {
+  width: 100%;
+  height: 240px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.map-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.location-card__link {
+  display: inline-block;
+  padding: 0.9rem 1.6rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.location-card__link:hover { color: var(--rose); }
+
+/* ─── Footer ────────────────────────────────────────────────── */
+.footer {
+  background: var(--text);
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--cream);
+}
+
+.footer__names {
+  font-family: var(--ff-serif);
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.3rem;
+}
+
+.footer__date {
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--blush);
+  margin-bottom: 1.2rem;
+}
+
+.footer__heart {
+  font-size: 1.2rem;
+  color: var(--blush);
+}
+
+/* ─── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 520px) {
+  .timeline__item { grid-template-columns: 48px 1fr; gap: 1rem; }
+  .timeline__icon { width: 40px; height: 40px; font-size: 1rem; }
+  .countdown__block { min-width: 60px; }
+  .countdown__sep { font-size: 2rem; }
+}
