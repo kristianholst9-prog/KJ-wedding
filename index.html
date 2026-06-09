@@ -61,7 +61,11 @@
     <!-- Hero content -->
     <div class="hero__inner">
       <p class="hero__pre">Vi gleder oss til å feire</p>
-      <h1 class="hero__names">Jakob <span class="amp">&amp;</span> Klara</h1>
+      <h1 class="hero__names">
+        <span id="name-a">Jakob</span>
+        <span class="amp">&amp;</span>
+        <span id="name-b">Klara</span>
+      </h1>
       <div class="hero__divider">
         <span class="hero__line"></span>
         <svg class="hero__ring" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -221,6 +225,14 @@
   </footer>
 
   <script>
+    /* ── Tilfeldig navnerekkefølge ─────────────── */
+    (function () {
+      if (Math.random() < 0.5) {
+        document.getElementById('name-a').textContent = 'Klara';
+        document.getElementById('name-b').textContent = 'Jakob';
+      }
+    })();
+
     /* ── Countdown ─────────────────────────────── */
     (function () {
       const target = new Date('2027-05-29T13:00:00');
