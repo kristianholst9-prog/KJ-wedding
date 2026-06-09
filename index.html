@@ -11,8 +11,54 @@
 </head>
 <body>
 
-  <!-- Hero -->
+  <!-- Grain texture overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ── Hero ─────────────────────────────────────────────── -->
   <header class="hero">
+
+    <!-- Parallax botanical layer -->
+    <div class="hero__parallax" aria-hidden="true">
+      <!-- Top-left branch -->
+      <svg class="botanical botanical--tl" viewBox="0 0 260 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30,310 C40,260 55,210 75,165 C95,120 120,80 150,45" stroke="#8A9E8A" stroke-width="1.4" stroke-linecap="round"/>
+        <path d="M75,165 C55,155 35,148 18,138" stroke="#8A9E8A" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M75,165 C65,143 70,125 78,108" stroke="#8A9E8A" stroke-width="1" stroke-linecap="round"/>
+        <path d="M50,228 C30,218 14,205 4,190" stroke="#8A9E8A" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M110,105 C92,90 82,72 80,52" stroke="#8A9E8A" stroke-width="1" stroke-linecap="round"/>
+        <!-- Leaves -->
+        <ellipse cx="14" cy="132" rx="12" ry="6" fill="#8A9E8A" opacity="0.45" transform="rotate(-30 14 132)"/>
+        <ellipse cx="3" cy="186" rx="10" ry="5" fill="#8A9E8A" opacity="0.4" transform="rotate(-20 3 186)"/>
+        <ellipse cx="79" cy="104" rx="9" ry="4" fill="#8A9E8A" opacity="0.4" transform="rotate(70 79 104)"/>
+        <ellipse cx="80" cy="48" rx="8" ry="4" fill="#8A9E8A" opacity="0.35" transform="rotate(80 80 48)"/>
+        <!-- Flowers -->
+        <circle cx="150" cy="44" r="5" fill="#D4A9A0" opacity="0.65"/>
+        <circle cx="144" cy="38" r="3" fill="#D4A9A0" opacity="0.4"/>
+        <circle cx="157" cy="50" r="2.5" fill="#D4A9A0" opacity="0.35"/>
+        <circle cx="112" cy="98" r="3.5" fill="#C2965A" opacity="0.4"/>
+      </svg>
+
+      <!-- Bottom-right branch -->
+      <svg class="botanical botanical--br" viewBox="0 0 260 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M230,10 C220,60 205,110 185,155 C165,200 140,240 110,275" stroke="#8A9E8A" stroke-width="1.4" stroke-linecap="round"/>
+        <path d="M185,155 C205,165 225,172 242,182" stroke="#8A9E8A" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M185,155 C195,177 190,195 182,212" stroke="#8A9E8A" stroke-width="1" stroke-linecap="round"/>
+        <path d="M210,92 C228,102 244,115 255,130" stroke="#8A9E8A" stroke-width="1.2" stroke-linecap="round"/>
+        <path d="M150,215 C168,230 178,248 180,268" stroke="#8A9E8A" stroke-width="1" stroke-linecap="round"/>
+        <!-- Leaves -->
+        <ellipse cx="246" cy="186" rx="12" ry="6" fill="#8A9E8A" opacity="0.45" transform="rotate(150 246 186)"/>
+        <ellipse cx="257" cy="134" rx="10" ry="5" fill="#8A9E8A" opacity="0.4" transform="rotate(160 257 134)"/>
+        <ellipse cx="181" cy="216" rx="9" ry="4" fill="#8A9E8A" opacity="0.4" transform="rotate(-70 181 216)"/>
+        <ellipse cx="180" cy="272" rx="8" ry="4" fill="#8A9E8A" opacity="0.35" transform="rotate(-80 180 272)"/>
+        <!-- Flowers -->
+        <circle cx="110" cy="276" r="5" fill="#D4A9A0" opacity="0.65"/>
+        <circle cx="116" cy="282" r="3" fill="#D4A9A0" opacity="0.4"/>
+        <circle cx="103" cy="270" r="2.5" fill="#D4A9A0" opacity="0.35"/>
+        <circle cx="148" cy="222" r="3.5" fill="#C2965A" opacity="0.4"/>
+      </svg>
+    </div>
+
+    <!-- Hero content -->
     <div class="hero__inner">
       <p class="hero__pre">Vi gleder oss til å feire</p>
       <h1 class="hero__names">Jakob <span class="amp">&amp;</span> Klara</h1>
@@ -30,8 +76,8 @@
     <div class="hero__scroll-hint">↓</div>
   </header>
 
-  <!-- Countdown -->
-  <section class="countdown-section">
+  <!-- ── Countdown ─────────────────────────────────────────── -->
+  <section class="countdown-section" data-animate>
     <div class="container">
       <div class="countdown" id="countdown">
         <div class="countdown__block">
@@ -58,13 +104,25 @@
     </div>
   </section>
 
-  <!-- Program -->
-  <section class="program section">
+  <!-- ── Botanical divider ──────────────────────────────────── -->
+  <div class="section-divider" aria-hidden="true">
+    <svg viewBox="0 0 400 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="30" x2="155" y2="30" stroke="#DDD3C6" stroke-width="0.8"/>
+      <line x1="245" y1="30" x2="400" y2="30" stroke="#DDD3C6" stroke-width="0.8"/>
+      <path d="M175,30 C178,22 184,18 192,16 C196,22 196,28 192,32 C188,36 181,36 175,30Z" fill="#8A9E8A" opacity="0.5"/>
+      <path d="M225,30 C222,22 216,18 208,16 C204,22 204,28 208,32 C212,36 219,36 225,30Z" fill="#8A9E8A" opacity="0.5"/>
+      <circle cx="200" cy="30" r="3" fill="#C2965A" opacity="0.6"/>
+      <circle cx="200" cy="30" r="1.2" fill="#C2965A" opacity="0.9"/>
+    </svg>
+  </div>
+
+  <!-- ── Program ────────────────────────────────────────────── -->
+  <section class="program section" data-animate>
     <div class="container container--narrow">
       <h2 class="section__title">Programmet</h2>
       <div class="timeline">
 
-        <div class="timeline__item">
+        <div class="timeline__item" data-animate data-delay="100">
           <div class="timeline__icon">⛪</div>
           <div class="timeline__body">
             <h3 class="timeline__heading">Vielse</h3>
@@ -74,7 +132,7 @@
           </div>
         </div>
 
-        <div class="timeline__item">
+        <div class="timeline__item" data-animate data-delay="200">
           <div class="timeline__icon">🥂</div>
           <div class="timeline__body">
             <h3 class="timeline__heading">Middag &amp; fest</h3>
@@ -88,13 +146,25 @@
     </div>
   </section>
 
-  <!-- Locations -->
-  <section class="locations section section--warm">
+  <!-- ── Botanical divider ──────────────────────────────────── -->
+  <div class="section-divider" aria-hidden="true">
+    <svg viewBox="0 0 400 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="30" x2="155" y2="30" stroke="#DDD3C6" stroke-width="0.8"/>
+      <line x1="245" y1="30" x2="400" y2="30" stroke="#DDD3C6" stroke-width="0.8"/>
+      <path d="M175,30 C178,22 184,18 192,16 C196,22 196,28 192,32 C188,36 181,36 175,30Z" fill="#D4A9A0" opacity="0.6"/>
+      <path d="M225,30 C222,22 216,18 208,16 C204,22 204,28 208,32 C212,36 219,36 225,30Z" fill="#D4A9A0" opacity="0.6"/>
+      <circle cx="200" cy="30" r="3" fill="#C2965A" opacity="0.6"/>
+      <circle cx="200" cy="30" r="1.2" fill="#C2965A" opacity="0.9"/>
+    </svg>
+  </div>
+
+  <!-- ── Locations ──────────────────────────────────────────── -->
+  <section class="locations section section--warm" data-animate>
     <div class="container">
       <h2 class="section__title">Steder</h2>
       <div class="locations__grid">
 
-        <div class="location-card">
+        <div class="location-card" data-animate data-delay="100">
           <h3 class="location-card__title">Fagerborg kirke</h3>
           <p class="location-card__sub">Gimleveien 14, 0264 Oslo</p>
           <div class="map-wrap">
@@ -112,7 +182,7 @@
           </a>
         </div>
 
-        <div class="location-card">
+        <div class="location-card" data-animate data-delay="200">
           <h3 class="location-card__title">Oslo Folkehøyskole Rønningen</h3>
           <p class="location-card__sub">Rønningveien 96, 0890 Oslo</p>
           <div class="map-wrap">
@@ -134,20 +204,29 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- ── Footer ────────────────────────────────────────────── -->
   <footer class="footer">
+    <svg class="footer__botanical" viewBox="0 0 300 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M80,40 C100,30 120,25 150,24 C180,25 200,30 220,40" stroke="#D4A9A0" stroke-width="1" opacity="0.5"/>
+      <path d="M100,40 C108,28 118,22 128,20" stroke="#8A9E8A" stroke-width="1" opacity="0.5"/>
+      <path d="M200,40 C192,28 182,22 172,20" stroke="#8A9E8A" stroke-width="1" opacity="0.5"/>
+      <ellipse cx="128" cy="18" rx="7" ry="4" fill="#8A9E8A" opacity="0.4" transform="rotate(-30 128 18)"/>
+      <ellipse cx="172" cy="18" rx="7" ry="4" fill="#8A9E8A" opacity="0.4" transform="rotate(30 172 18)"/>
+      <circle cx="150" cy="22" r="4" fill="#D4A9A0" opacity="0.6"/>
+      <circle cx="150" cy="22" r="2" fill="#C2965A" opacity="0.7"/>
+    </svg>
     <p class="footer__names">Jakob &amp; Klara</p>
     <p class="footer__date">29. mai 2027</p>
     <p class="footer__heart">♡</p>
   </footer>
 
   <script>
+    /* ── Countdown ─────────────────────────────── */
     (function () {
       const target = new Date('2027-05-29T13:00:00');
       function pad(n) { return String(n).padStart(2, '0'); }
       function tick() {
-        const now = new Date();
-        const diff = target - now;
+        const diff = target - new Date();
         if (diff <= 0) {
           document.getElementById('countdown').innerHTML = '<p class="countdown__done">Dagen er her! 🎉</p>';
           return;
@@ -163,6 +242,39 @@
       }
       tick();
       setInterval(tick, 1000);
+    })();
+
+    /* ── Parallax ──────────────────────────────── */
+    (function () {
+      const layer = document.querySelector('.hero__parallax');
+      if (!layer || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            const y = window.scrollY;
+            layer.style.transform = `translateY(${y * 0.38}px)`;
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }, { passive: true });
+    })();
+
+    /* ── Scroll animations ─────────────────────── */
+    (function () {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const els = document.querySelectorAll('[data-animate]');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const delay = entry.target.dataset.delay || 0;
+            setTimeout(() => entry.target.classList.add('is-visible'), Number(delay));
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      els.forEach(el => observer.observe(el));
     })();
   </script>
 
