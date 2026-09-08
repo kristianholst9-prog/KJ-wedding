@@ -108,6 +108,21 @@ body {
     var(--cream);
 }
 
+/* Hero with photo background */
+.hero--photo {
+  background:
+    linear-gradient(to bottom, rgba(30,20,15,0.45) 0%, rgba(30,20,15,0.25) 50%, rgba(30,20,15,0.55) 100%),
+    url('images/brudeparet.jpg') center top / cover no-repeat;
+  color: #f5efe8;
+}
+.hero--photo .hero__pre,
+.hero--photo .hero__date,
+.hero--photo .hero__sub { color: #f0e8df; }
+.hero--photo .hero__names { color: #fff; text-shadow: 0 2px 20px rgba(0,0,0,0.3); }
+.hero--photo .hero__line { background: rgba(240,220,200,0.6); }
+.hero--photo .hero__ring { color: rgba(240,220,200,0.7); }
+.hero--photo .hero__scroll-hint { color: rgba(240,220,200,0.6); }
+
 /* Parallax botanical layer */
 .hero__parallax {
   position: absolute;
