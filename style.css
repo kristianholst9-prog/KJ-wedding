@@ -376,16 +376,16 @@ body {
 /* ─── Couple photo ──────────────────────────────────────────── */
 .couple-photo {
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 3rem 2rem;
 }
 
 .couple-photo__frame {
   display: inline-block;
-  max-width: min(420px, 88vw);
+  max-width: min(300px, 72vw);
   width: 100%;
   border-radius: 2px;
   overflow: hidden;
-  box-shadow: 0 8px 40px rgba(90, 70, 50, 0.18);
+  box-shadow: 0 6px 28px rgba(90, 70, 50, 0.15);
   position: relative;
 }
 
